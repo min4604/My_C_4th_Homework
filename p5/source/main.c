@@ -1,20 +1,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-float money;
+
 
 int main(void)
 {
+	int n[10] = { 32,27,64,18,95,14,90,70,60,37 };
+	int i;
+	
+	printf("%s%13s\n", "Element", "Value");
 
-	while (money != -1)
+	for (i = 0; i < 10; i++)
 	{
-		printf("Enter sales in dollars (-1 to end):");
-		scanf_s("%f", &money);
-		if (money == -1)
-			break;
-		printf("Salary is:%.2f\n", (200 + (money*0.09)));
+		printf("%7d%13d\n", i, n[i]);
 	}
-
 	system("pause");
 	return 0;
 }
