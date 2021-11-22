@@ -1,25 +1,40 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
+#include<time.h>
+#define SIZE 7
 
-double r[] = { 0.1,0.105,0.11,0.115,0.12 };
-double p = 5000;
-int year = 15;
-double ans;
-int i, j;
+void printArray(const int a[][3]);
+
 int main(void)
 {
-	for (i = 0; i < 5; i++)
-	{
-		printf("rate is%.1f%s\n", r[i] * 100,"%");
-		printf("year\tAmount on deposit\n");
-		for (j = 1; j <= year; j++)
-		{
-			ans = p * pow(1.0 + r[i], j);
-			printf("%4d%21.2f\n", j, ans);
-		}
-	}
+	int array1[2][3] = { {1,2,3},{4,5,6} };
+	int array2[2][3] = { 1,2,3,4,5 };
+	int array3[2][3] = { {1,2},{4} };
+
+	printf("Values in array1 by row are : \n");
+	printArray(array1);
+
+	printf("Values in array2 by row are : \n");
+	printArray(array2);
+
+	printf("Values in array3 by row are : \n");
+	printArray(array3);
 
 	system("pause");
 	return 0;
+}
+
+void printArray(const int a[][3])
+{
+	int i;
+	int j;
+
+	for (i = 0; i <= 1; i++)
+	{
+		for (j = 0; j <= 2; j++)
+		{
+			printf("%d ", a[i][j]);
+		}
+		printf("\n");
+	}
 }
