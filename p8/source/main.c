@@ -1,26 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
+#define SIZE 10
 
-int i, j;
-int ii, jj;
 int main(void)
 {
-	printf("Enter iength:");
-	scanf_s("%d", &ii);
-	printf("Enter breadth:");
-	scanf_s("%d", &jj);
-	for (i = 0; i < ii; i++)
+	int n[SIZE] = { 19,3,15,7,11,9,13,5,17,1 };
+	int i;
+	int j;
+
+	printf("%s%13s%17s\n", "Element", "Value", "Histogram");
+
+	for (i = 0; i < SIZE; i++)
 	{
-		for (j = 0; j < jj; j++)
+		printf("%7d%13d ", i, n[i]);
+		for (j = 1; j <= n[i]; j++)
 		{
-			if (i == 0 || i == (ii-1) || j == 0 || j == (jj-1))
-				printf("+");
-			else
-				printf(" ");
+			printf("%c",'*');
 		}
 		printf("\n");
 	}
-
 	system("pause");
 	return 0;
 }
