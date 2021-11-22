@@ -1,27 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
+#define SIZE 12
 
-float hourwork,rate,total;
 int main(void)
 {
-	while (1 == 1)
+	int a[SIZE] = { 1,3,5,4,7,2,99,16,45,67,89,45 };
+	int i;
+	int total = 0;
+	for (i = 0; i < SIZE; i++)
 	{
-		printf("Enter # of hours worked (-1 to end):");
-		scanf_s("%f", &hourwork);
-		if (hourwork == -1)
-			break;
-		printf("Enter hourly rate of the worker ($00.00):");
-		scanf_s("%f", &rate);
-		if (hourwork <= 40)
-		{
-			total = hourwork * rate;
-		}
-		else
-		{
-			total = rate * 40 + rate * 1.5*(hourwork - 40);
-		}
-		printf("Salary is $%.2f\n\n", total);
+		total += a[i];
 	}
+	printf("Total of array element values is %d\n", total);
 	system("pause");
 	return 0;
 }
