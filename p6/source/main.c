@@ -1,21 +1,20 @@
 #include<stdio.h>
 #include<stdlib.h>
-
-float prin,rate,day ;
+#define SIZE 10
 
 int main(void)
 {
-	while (prin != -1)
+	int s[SIZE];
+	int j;
+	for (j = 0; j < SIZE; j++)
 	{
-		printf("Enter loan principal (-1 to end):");
-		scanf_s("%f", &prin);
-		if (prin == -1)
-			break;
-		printf("Enter interest rate:");
-		scanf_s("%f", &rate);
-		printf("Enter term of the loan in day:");
-		scanf_s("%f", &day);
-		printf("The interest charge is $%.2f\n\n", (prin*rate*day / 365));
+		s[j] = 2 + 2 * j;
+	}
+	printf("%s%13s\n", "Element", "Value");
+
+	for (j = 0; j < SIZE; j++)
+	{
+		printf("%7d%13d\n", j, s[j]);
 	}
 	system("pause");
 	return 0;
