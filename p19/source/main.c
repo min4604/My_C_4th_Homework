@@ -10,7 +10,7 @@ int main(void)
 	int i;
 
 	printf("Enter a string: ");
-	scanf_s("%20s",string1,sizeof(string1));
+	scanf_s("%s",string1,sizeof(string1));
 	printf("string1 is: %s\nstring2 is %s\n", string1, string2);
 	printf("string1 with spaces between characters is: \n");
 
