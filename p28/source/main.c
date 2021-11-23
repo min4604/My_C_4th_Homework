@@ -36,7 +36,7 @@ int main(void)
 	return 0;
 }
 
-void modifyArray(int b[], int size)
+void modifyArray( int b[], int size)
 {
 	int j;
 
