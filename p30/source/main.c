@@ -1,22 +1,30 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-float prin,rate,day ;
+void inverse(int *);
 
 int main(void)
 {
-	while (prin != -1)
-	{
-		printf("Enter loan principal (-1 to end):");
-		scanf_s("%f", &prin);
-		if (prin == -1)
-			break;
-		printf("Enter interest rate:");
-		scanf_s("%f", &rate);
-		printf("Enter term of the loan in day:");
-		scanf_s("%f", &day);
-		printf("The interest charge is $%.2f\n\n", (prin*rate*day / 365));
-	}
+	int a[3] = { 3,5,7 }, i;
+	for (i = 0; i < 3; i++)
+		printf("%d  ", a[i]);
+	printf("\n");
+
+	inverse(a);
+
+	for (i = 0; i < 3; i++)
+		printf("%d  ", a[i]);
+	printf("\n");
+
 	system("pause");
 	return 0;
+}
+
+void inverse(int *b)
+{
+	int tmp[3], i;
+	for (i = 0; i < 3; i++)
+		tmp[2 - i] = b[i];
+	for (i = 0; i < 3; i++)
+		b[i] = tmp[i];
 }
