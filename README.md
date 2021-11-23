@@ -5,3 +5,4 @@
 # p8  finish
 # p13 finish
 # p14 finish
+# p19 finish  scanf_s("%20s",s.name) changeto scanf_s("%20s",s.name,sizeof(s.name)) to work

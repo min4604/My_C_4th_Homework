@@ -1,25 +1,25 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
 
-int i, j, k;
+
 
 int main(void)
 {
-	printf("side1 side2 hypotenuse\n");
-	for (i = 1; i <= 500; i++)
-	{
-		for (j = 1; j <= 500; j++)
-		{
-			for (k = 1; k <= 500; k++)
-			{
-				if (pow(i, 2) == (pow(j, 2) + pow(k, 2)))
-				{
-					printf("%5d %5d %10d\n", j, k, i);
-				}
-			}
-		}
-	}
+	char string1[20];
+	char string2[] = "string literal";
+	int i;
+
+	printf("Enter a string: ");
+	scanf_s("%20s",string1,sizeof(string1));
+	printf("string1 is: %s\nstring2 is %s\n", string1, string2);
+	printf("string1 with spaces between characters is: \n");
+
+	for (i = 0; string1[i] != '\0'; i++)
+		printf("%c", string1[i]);
+
+	printf("\n");
+
+
 	system("pause");
 	return 0;
 }
